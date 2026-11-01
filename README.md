@@ -1,28 +1,45 @@
-# React + Vite
+# Task Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-Currently, two official plugins are available:
+A lightweight task manager built with React and Vite. Add tasks, mark them complete, edit their descriptions, and remove tasks. Your list is saved in this browser using `localStorage`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Add, edit, complete, and delete tasks.
+- Restore saved tasks after reloading the page.
+- Show an empty state and current task count.
+- Keyboard-accessible checkbox and action controls with descriptive labels.
+- Responsive layout with visible focus indicators.
+- Clear feedback for task actions and browser storage errors.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Requirements
 
-## Repository
+- Node.js 20.19+ or 22.12+
+- npm
 
-This project is published at: https://github.com/Charllie88/task-menagment-app
+## Run locally
 
-# React + Vite
+```sh
+npm install
+npm run dev
+```
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Open the local URL printed by Vite.
 
-Currently, two official plugins are available:
+## Available scripts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- `npm run dev` - Start the Vite development server.
+- `npm run build` - Create a production build in `dist/`.
+- `npm run preview` - Preview the production build locally.
+- `npm run lint` - Check JavaScript and JSX with ESLint.
 
-## Expanding the ESLint configuration
+## Project structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `index.html` - App entry document and metadata.
+- `src/main.jsx` - React root and global stylesheet entry point.
+- `src/App.jsx` - Task state, local storage, and application layout.
+- `src/components/TaskForm.jsx` - Add/edit task form.
+- `src/components/TaskList.jsx` - Task list and accessible task actions.
+- `src/index.css` - Global styles, theme tokens, and focus defaults.
+- `src/App.css` - Task manager layout and component styles.
+
+Task data is stored locally in the current browser and is not synchronized between devices.
